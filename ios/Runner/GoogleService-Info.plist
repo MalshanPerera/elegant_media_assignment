@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>716439722346-n2g6i9vlutc7e61brods13vdr3g8nblq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.716439722346-n2g6i9vlutc7e61brods13vdr3g8nblq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCgifCzRBzTLRAGmtLgfbvrbI94iTHwEkU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>716439722346</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.elegantMediaAssignment</string>
+	<key>PROJECT_ID</key>
+	<string>elegant-media-assignment</string>
+	<key>STORAGE_BUCKET</key>
+	<string>elegant-media-assignment.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:716439722346:ios:e9252f2247b68c3e75ad13</string>
+</dict>
+</plist>

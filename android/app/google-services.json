@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "716439722346",
+    "project_id": "elegant-media-assignment",
+    "storage_bucket": "elegant-media-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716439722346:android:0a9e9b9338b4f6ca75ad13",
+        "android_client_info": {
+          "package_name": "com.example.elegant_media_assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716439722346-9lnlhgjo9gqn8pmm9e4on52eishm8ie7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9bcnbzR1aL9fATsfmWU5yhw8HuqA2fDE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716439722346-9lnlhgjo9gqn8pmm9e4on52eishm8ie7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "716439722346-n2g6i9vlutc7e61brods13vdr3g8nblq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.elegantMediaAssignment"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
