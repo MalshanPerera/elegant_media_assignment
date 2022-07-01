@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import '../helpers/app_strings.dart';
 import '../helpers/app_utils.dart';
+import '../view_models/auth_view_model/auth_view_model.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -15,9 +16,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 2)).then((_) {
-      Navigator.pushReplacementNamed(context, LOGIN_ROUTE);
-    });
+    context.read<AuthViewModel>().isLoggedIn();
   }
 
   @override

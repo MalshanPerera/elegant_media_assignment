@@ -13,6 +13,11 @@ class Cats {
     required this.data,
   });
 
+  factory Cats.empty() => Cats(
+        status: 0,
+        data: [],
+      );
+
   factory Cats.fromJson(Map<String, dynamic> json) => Cats(
         status: json["status"] ?? 0,
         data: List<Data>.from(

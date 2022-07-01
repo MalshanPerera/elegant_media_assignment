@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../helpers/app_colors.dart';
+import '../helpers/app_utils.dart';
 import '../view_models/auth_view_model/auth_view_model.dart';
 
 class LoginView extends StatelessWidget {
@@ -15,11 +17,18 @@ class LoginView extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Center(
-        child: ElevatedButton(
-          child: const Text("Login"),
-          onPressed: () {
-            context.read<AuthViewModel>().facebookLogin();
-          },
+        child: SizedBox(
+          width: Utils.getWidth(200.0),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              elevation: 0.0,
+              primary: PRIMARY_COLOR.withOpacity(0.8),
+            ),
+            onPressed: () {
+              context.read<AuthViewModel>().facebookLogin();
+            },
+            child: const Text("Login"),
+          ),
         ),
       ),
     );

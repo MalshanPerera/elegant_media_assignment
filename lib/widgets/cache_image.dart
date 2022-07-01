@@ -25,10 +25,12 @@ class CachedImage extends StatelessWidget {
       height: height,
       width: width,
       child: CachedNetworkImage(
-        imageUrl: imageURL ?? PLACEHOLDER_IMAGE,
+        // TODO: Change to proper image URL
+        // imageUrl: imageURL ?? PLACEHOLDER_IMAGE,
+        imageUrl: PLACEHOLDER_IMAGE,
         placeholder: (v, w) => SizedBox(
-          height: Utils.getHeight(50.0),
-          width: Utils.getHeight(50.0),
+          height: Utils.getHeight(100.0),
+          width: Utils.getHeight(100.0),
           child: const Center(
             child: CircularProgressIndicator(
               backgroundColor: PRIMARY_COLOR,

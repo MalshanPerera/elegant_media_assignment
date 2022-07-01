@@ -1,5 +1,9 @@
-import 'package:flutter/material.dart' show MaterialPageRoute, Route, RouteSettings;
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../injection_container.dart';
+import '../models/cats_model.dart';
+import '../view_models/home_view_model/home_view_model.dart';
 import '../views/details_view.dart';
 import '../views/home_view.dart';
 import '../views/login_view.dart';
@@ -20,11 +24,16 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       );
     case HOME_ROUTE:
       return MaterialPageRoute(
-        builder: (c) => const HomeView(),
+        builder: (c) => ChangeNotifierProvider(
+          create: (_) => sl<HomeViewModel>(),
+          child: const HomeView(),
+        ),
       );
     case DETAILS_ROUTE:
       return MaterialPageRoute(
-        builder: (c) => const DetailsView(),
+        builder: (c) => DetailsView(
+          data: settings.arguments as Data,
+        ),
       );
     case MAP_ROUTE:
       return MaterialPageRoute(
