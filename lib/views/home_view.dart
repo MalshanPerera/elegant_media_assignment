@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import '../helpers/app_colors.dart';
 import '../helpers/app_strings.dart';
 import '../helpers/app_utils.dart';
-import '../models/items_model.dart';
+import '../models/hotels_model.dart';
 import '../view_models/auth_view_model/auth_view_model.dart';
 import '../view_models/home_view_model/home_view_model.dart';
 import '../widgets/no_data.dart';
@@ -25,7 +25,7 @@ class _HomeViewState extends State<HomeView> {
   void initState() {
     super.initState();
     user = FirebaseAuth.instance.currentUser;
-    context.read<HomeViewModel>().loadItems();
+    context.read<HomeViewModel>().loadHotels();
   }
 
   @override
@@ -85,13 +85,13 @@ class _HomeViewState extends State<HomeView> {
               height: Utils.getHeight(15.0),
             ),
             Selector<HomeViewModel, List<Data>?>(
-              selector: (_, vm) => vm.items,
-              builder: (_, items, __) {
-                if (items == null) {
+              selector: (_, vm) => vm.hotels,
+              builder: (_, hotels, __) {
+                if (hotels == null) {
                   return const NoData();
                 }
 
-                if (items.isEmpty) {
+                if (hotels.isEmpty) {
                   return Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -108,14 +108,14 @@ class _HomeViewState extends State<HomeView> {
                 return Expanded(
                   child: ListView.separated(
                     padding: EdgeInsets.zero,
-                    itemCount: items.length,
+                    itemCount: hotels.length,
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         child: TileCard(
-                          cat: items[index],
+                          cat: hotels[index],
                         ),
                         onTap: () {
-                          Navigator.pushNamed(context, DETAILS_ROUTE, arguments: items[index]);
+                          Navigator.pushNamed(context, DETAILS_ROUTE, arguments: hotels[index]);
                         },
                       );
                     },

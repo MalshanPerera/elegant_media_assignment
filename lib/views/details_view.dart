@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../helpers/app_strings.dart';
 import '../helpers/app_utils.dart';
-import '../models/items_model.dart';
+import '../models/hotels_model.dart';
 import '../widgets/cache_image.dart';
 
 class DetailsView extends StatelessWidget {

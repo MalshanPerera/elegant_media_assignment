@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../models/items_model.dart';
+import '../models/hotels_model.dart';
 
 class MapView extends StatefulWidget {
   final Data data;

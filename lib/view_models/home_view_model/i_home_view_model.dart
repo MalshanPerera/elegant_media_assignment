@@ -1,4 +1,4 @@
-import '../../models/items_model.dart';
+import '../../models/hotels_model.dart';
 import '../../repositories/clients/home_repository.dart';
 import '../../services/error_service.dart';
 import '../../services/navigation_service.dart';
@@ -9,7 +9,7 @@ class IHomeViewModel extends HomeViewModel {
   final NavigationService navigationService;
   final ErrorService errorService;
 
-  List<Data>? _itemList = [];
+  List<Data>? _hotelList = [];
 
   IHomeViewModel({
     required this.homeRepository,
@@ -18,17 +18,17 @@ class IHomeViewModel extends HomeViewModel {
   });
 
   @override
-  void loadItems() {
-    homeRepository.getItems().then((items) {
-      if (items != null) {
-        _itemList = items.data.toList();
+  void loadHotels() {
+    homeRepository.getHotels().then((hotels) {
+      if (hotels != null) {
+        _hotelList = hotels.data.toList();
       } else {
-        _itemList = null;
+        _hotelList = null;
       }
       notifyListeners();
     });
   }
 
   @override
-  List<Data>? get items => _itemList;
+  List<Data>? get hotels => _hotelList;
 }

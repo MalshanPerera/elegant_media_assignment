@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 import '../../helpers/app_config.dart';
 import '../../helpers/app_enum.dart';
 import '../../helpers/app_errors.dart';
-import '../../models/items_model.dart';
+import '../../models/hotels_model.dart';
 import '../../services/services.dart' show ErrorService, NetworkService;
 import '../clients/home_repository.dart';
 
@@ -16,12 +16,12 @@ class HomeDelegate extends HomeRepository {
   HomeDelegate({required this.networkService, required this.errorService});
 
   @override
-  Future<Items?> getItems() async {
+  Future<Hotels?> getHotels() async {
     try {
-      var response = await networkService.performRequest(AppConfig.getItems, HttpAction.GET);
+      var response = await networkService.performRequest(AppConfig.getHotels, HttpAction.GET);
 
       if (response.statusCode == 200) {
-        return await compute(itemsFromJson, response.body);
+        return await compute(hotelsFromJson, response.body);
       } else {
         errorService.showError(
           UnknownFailure(
