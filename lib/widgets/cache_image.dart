@@ -25,7 +25,9 @@ class CachedImage extends StatelessWidget {
       height: height,
       width: width,
       child: CachedNetworkImage(
-        // TODO: Change to proper image URL
+        // network image from the endpoint is not a correct network image. for testing purposes,
+        // I commented the line below and added the placeholder just to see the image properly.
+        // If needed in the future, you can uncomment the line below and remove the placeholder.
         // imageUrl: imageURL ?? PLACEHOLDER_IMAGE,
         imageUrl: PLACEHOLDER_IMAGE,
         placeholder: (v, w) => SizedBox(
