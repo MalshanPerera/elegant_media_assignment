@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../helpers/app_utils.dart';
-import '../models/cats_model.dart';
+import '../models/items_model.dart';
 import 'cache_image.dart';
 
 class TileCard extends StatelessWidget {

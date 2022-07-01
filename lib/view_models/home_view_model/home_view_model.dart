@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart' show ChangeNotifier;
 
-import '../../models/cats_model.dart';
+import '../../models/items_model.dart';
 
 abstract class HomeViewModel extends ChangeNotifier {
-  void loadCats();
+  void loadItems();
 
-  List<Data>? get cats;
+  List<Data>? get items;
 }

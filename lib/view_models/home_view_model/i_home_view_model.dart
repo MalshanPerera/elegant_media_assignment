@@ -1,4 +1,4 @@
-import '../../models/cats_model.dart';
+import '../../models/items_model.dart';
 import '../../repositories/clients/home_repository.dart';
 import '../../services/error_service.dart';
 import '../../services/navigation_service.dart';
@@ -9,7 +9,7 @@ class IHomeViewModel extends HomeViewModel {
   final NavigationService navigationService;
   final ErrorService errorService;
 
-  List<Data>? _catsList = [];
+  List<Data>? _itemList = [];
 
   IHomeViewModel({
     required this.homeRepository,
@@ -18,17 +18,17 @@ class IHomeViewModel extends HomeViewModel {
   });
 
   @override
-  void loadCats() {
-    homeRepository.getCats().then((cats) {
-      if (cats != null) {
-        _catsList = cats.data.toList();
+  void loadItems() {
+    homeRepository.getItems().then((items) {
+      if (items != null) {
+        _itemList = items.data.toList();
       } else {
-        _catsList = null;
+        _itemList = null;
       }
       notifyListeners();
     });
   }
 
   @override
-  List<Data>? get cats => _catsList;
+  List<Data>? get items => _itemList;
 }

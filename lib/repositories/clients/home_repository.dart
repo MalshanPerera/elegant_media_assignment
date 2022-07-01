@@ -1,5 +1,5 @@
-import '../../models/cats_model.dart';
+import '../../models/items_model.dart';
 
 abstract class HomeRepository {
-  Future<Cats?> getCats();
+  Future<Items?> getItems();
 }

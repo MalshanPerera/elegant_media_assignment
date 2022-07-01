@@ -5,9 +5,8 @@ import 'package:flutter/foundation.dart';
 import '../../helpers/app_config.dart';
 import '../../helpers/app_enum.dart';
 import '../../helpers/app_errors.dart';
-import '../../models/cats_model.dart';
-import '../../services/error_service.dart';
-import '../../services/network_service.dart';
+import '../../models/items_model.dart';
+import '../../services/services.dart' show ErrorService, NetworkService;
 import '../clients/home_repository.dart';
 
 class HomeDelegate extends HomeRepository {
@@ -17,12 +16,12 @@ class HomeDelegate extends HomeRepository {
   HomeDelegate({required this.networkService, required this.errorService});
 
   @override
-  Future<Cats?> getCats() async {
+  Future<Items?> getItems() async {
     try {
-      var response = await networkService.performRequest(AppConfig.getCats, HttpAction.GET);
+      var response = await networkService.performRequest(AppConfig.getItems, HttpAction.GET);
 
       if (response.statusCode == 200) {
-        return await compute(catsFromJson, response.body);
+        return await compute(itemsFromJson, response.body);
       } else {
         errorService.showError(
           UnknownFailure(

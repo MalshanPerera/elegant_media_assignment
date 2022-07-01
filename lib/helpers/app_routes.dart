@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../injection_container.dart';
-import '../models/cats_model.dart';
+import '../models/items_model.dart';
 
 import '../views/views.dart';
 import '../view_models/view_models.dart' show HomeViewModel;
