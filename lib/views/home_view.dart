@@ -1,13 +1,13 @@
-import 'package:elegant_media_assignment/helpers/app_colors.dart';
-import 'package:elegant_media_assignment/helpers/app_strings.dart';
-import 'package:elegant_media_assignment/view_models/home_view_model/home_view_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../helpers/app_colors.dart';
+import '../helpers/app_strings.dart';
 import '../helpers/app_utils.dart';
 import '../models/cats_model.dart';
 import '../view_models/auth_view_model/auth_view_model.dart';
+import '../view_models/home_view_model/home_view_model.dart';
 import '../widgets/no_data.dart';
 import '../widgets/tile_card.dart';
 
