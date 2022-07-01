@@ -3,13 +3,11 @@ import 'package:provider/provider.dart';
 
 import '../injection_container.dart';
 import '../models/cats_model.dart';
-import '../view_models/home_view_model/home_view_model.dart';
-import '../views/details_view.dart';
-import '../views/home_view.dart';
-import '../views/login_view.dart';
-import '../views/map_view.dart';
-import '../views/splash_view.dart';
+
+import '../views/views.dart';
+import '../view_models/view_models.dart' show HomeViewModel;
 import '../widgets/view_not_found.dart';
+
 import 'app_strings.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
