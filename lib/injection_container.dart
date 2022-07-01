@@ -4,6 +4,11 @@ import 'repositories/repositories.dart';
 import 'services/services.dart';
 import 'view_models/view_models.dart';
 
+/*
+  All the services and repositories that are used in the app should be registered here.
+  Registering in the GetIt container means that they will be instantiated once,
+  and shared between all the widgets in the app.
+*/
 final sl = GetIt.instance;
 
 void init() {

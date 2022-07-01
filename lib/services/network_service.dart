@@ -8,6 +8,12 @@ import '../helpers/app_enum.dart';
 import '../helpers/app_errors.dart';
 import 'error_service.dart';
 
+/*
+  This class is used to make HTTP requests.
+  It is a singleton class, so it can be used anywhere in the app.
+  It can be further extended to make HTTP requests to different endpoints. [GET, POST, PUT, PATCH, POST_ENCODED_URL, DELETE]
+*/
+
 class NetworkService {
   late Client _client;
 

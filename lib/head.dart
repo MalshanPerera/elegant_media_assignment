@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
         title: APP_NAME,
         debugShowCheckedModeBanner: false,
         navigatorKey: sl<NavigationService>().navigatorKey,
+        // Can be added all the text styles here when the typography is finalized
+        // All theme data can be configured here as well
         theme: ThemeData(
           primaryColor: PRIMARY_COLOR,
           primarySwatch: Colors.blue,
