@@ -37,7 +37,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       );
     case MAP_ROUTE:
       return MaterialPageRoute(
-        builder: (c) => const MapView(),
+        builder: (c) => MapView(
+          data: settings.arguments as Data,
+        ),
       );
     default:
       return MaterialPageRoute(

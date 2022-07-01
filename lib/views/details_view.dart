@@ -1,8 +1,8 @@
-import 'package:elegant_media_assignment/helpers/app_strings.dart';
-import 'package:elegant_media_assignment/models/cats_model.dart';
 import 'package:flutter/material.dart';
 
+import '../helpers/app_strings.dart';
 import '../helpers/app_utils.dart';
+import '../models/cats_model.dart';
 import '../widgets/cache_image.dart';
 
 class DetailsView extends StatelessWidget {
@@ -23,7 +23,11 @@ class DetailsView extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.location_on),
-            onPressed: () => Navigator.pushNamed(context, MAP_ROUTE),
+            onPressed: () => Navigator.pushNamed(
+              context,
+              MAP_ROUTE,
+              arguments: data,
+            ),
           ),
         ],
       ),
